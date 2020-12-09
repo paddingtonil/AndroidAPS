@@ -309,12 +309,10 @@
     <string name="wear_detailedIOB_title">Wys gedetailleerde IAB</string>
     <string name="wear_detailedIOB_summary">Breek af IAB in bolus en basale IAB op die watchface</string>
     <string name="nosuccess">nie suksesvol - Kontroleer asseblief foon</string>
-    <string name="patientage">Pasiënt ouderdom</string>
     <string name="child">Kind</string>
     <string name="teenage">Tiener</string>
     <string name="adult">Volwassene</string>
     <string name="resistantadult">Insulien weerstandige volwasse</string>
-    <string name="patientage_summary">Kies asseblief pasiënt ouderdom om veiligheids limiete te stel</string>
     <string name="Glimp">Glimp</string>
     <string name="needwhitelisting">%1$s benodig battery optimisering bemagtiging vir beter werksverrigting</string>
     <string name="loopsuspended">Lus opgeskort</string>
@@ -572,7 +570,6 @@
     <string name="combo_error_failure_reading_changed_basal_rate">Basale koers is verander op pomp, maar kon nie dit teruglees nie</string>
     <string name="combo_activity_checking_for_history_changes">Kontroleer tans vir geskiedenis veranderinge</string>
     <string name="combo_error_multiple_boluses_with_identical_timestamp">Veelvuldige boluses met dieselfde hoeveelheid binne die dieselfde minuut was nounet ingevoer. Slegs een rekord kon bygevoeg word in behandelings. Kontroleer asseblief die pomp en voeg per hand \'n bolus rekord met behulp van die Careportal oortjie maak seker om \'n bolus te skep met \'n tyd deur geen ander bolus gebruik.</string>
-    <string name="about_link_urls">\n\nhttp://www.androidaps.org\nhttp://www.androidaps.de (de)\n\nfacebook:\nhttp://facebook.androidaps.org\nhttp://facebook.androidaps.de (de)</string>
     <string name="combo_check_date">Die laaste bolus is ouer as 24 uur of is in die toekoms. Kontroleer asseblief of die datum op die pomp reg ingestel is.</string>
     <string name="combo_suspious_bolus_time">Tyd/datum van die gelewerde bolus op pomp lyk verkeerd, IAB is waarskynlik verkeerd. Kontroleer asseblief pomp tyd/datum.</string>
     <string name="profileswitch_ismissing">ProfileSwitch ontbreek. Doen \'n profiel skakelaar of druk \"Aktiveer profiel\" in die LokaleProfiel.</string>
@@ -655,7 +652,7 @@
     <string name="apssetup">Konfigureer APS plugin</string>
     <string name="sensitivitysetup">Konfigureer Sensitiwiteits plugin</string>
     <string name="setupwizard_sensitivity_description">Sensitiwiteit plugin vir sensitiwiteit opsporing en KAB berekening. Vir meer inligting besoek:</string>
-    <string name="setupwizard_sensitivity_url">https://androidaps.readthedocs.io/en/latest/EN/Configuration/Sensitivity-detection-and-COB.html</string>
+    <string name="setupwizard_sensitivity_url">https://github.com/MilosKozak/AndroidAPS/wiki/Sensitivity-detection-and-COB</string>
     <string name="diawarning">Onthou asseblief: dat nuwe insulien profiele vereis DIA van minstens 5h. DIA 5 – 6h op nuwe profiel is gelyk aan DIA 3h op ou insulien profiele.</string>
     <string name="bgsourcesetup">Konfigureer BG bron</string>
     <string name="setupwizard_profile_description">Kies asseblief bron van profiel. As Pasiënt \'n kind is gebruik NS profiel. As niemand jou volg op Nightscout sal jy waarskynlik plaaslike profiel kies. Onthou asseblief dat jy net die bron kies van profiel. Om dit te gebruik moet jy dit aktiveer deur uitvoering \"Profiel skakelaar\"</string>

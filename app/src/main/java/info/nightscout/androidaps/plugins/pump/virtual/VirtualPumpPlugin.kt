@@ -1,6 +1,8 @@
 package info.nightscout.androidaps.plugins.pump.virtual
 
 import android.os.SystemClock
+import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SwitchPreference
 import dagger.android.HasAndroidInjector
 import info.nightscout.androidaps.Config
 import info.nightscout.androidaps.R
@@ -59,7 +61,6 @@ class VirtualPumpPlugin @Inject constructor(
     .pluginName(R.string.virtualpump)
     .shortName(R.string.virtualpump_shortname)
     .preferencesId(R.xml.pref_virtualpump)
-    .neverVisible(config.NSCLIENT)
     .description(R.string.description_pump_virtual)
     .setDefault(),
     injector, aapsLogger, resourceHelper, commandQueue
@@ -118,6 +119,13 @@ class VirtualPumpPlugin @Inject constructor(
     override fun onStop() {
         disposable.clear()
         super.onStop()
+    }
+
+    override fun preprocessPreferences(preferenceFragment: PreferenceFragmentCompat) {
+        super.preprocessPreferences(preferenceFragment)
+        val uploadStatus = preferenceFragment.findPreference(resourceHelper.gs(R.string.key_virtualpump_uploadstatus)) as SwitchPreference?
+            ?: return
+        uploadStatus.isVisible = !config.NSCLIENT
     }
 
     override fun isFakingTempsByExtendedBoluses(): Boolean {
@@ -332,7 +340,7 @@ class VirtualPumpPlugin @Inject constructor(
 
     override fun getJSONStatus(profile: Profile, profileName: String, version: String): JSONObject {
         val now = System.currentTimeMillis()
-        if (!sp.getBoolean("virtualpump_uploadstatus", false)) {
+        if (!sp.getBoolean(R.string.key_virtualpump_uploadstatus, false)) {
             return JSONObject()
         }
         val pump = JSONObject()
@@ -396,7 +404,7 @@ class VirtualPumpPlugin @Inject constructor(
     }
 
     fun refreshConfiguration() {
-        val pumptype = sp.getString(R.string.key_virtualpump_type, "Generic AAPS")
+        val pumptype = sp.getString(R.string.key_virtualpump_type, PumpType.GenericAAPS.description)
         val pumpTypeNew = PumpType.getByDescription(pumptype)
         aapsLogger.debug(LTag.PUMP, "Pump in configuration: $pumptype, PumpType object: $pumpTypeNew")
         if (pumpType == pumpTypeNew) return

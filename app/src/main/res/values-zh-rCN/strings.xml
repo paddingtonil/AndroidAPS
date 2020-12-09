@@ -308,12 +308,10 @@
     <string name="wear_detailedIOB_title">显示详细 IOB</string>
     <string name="wear_detailedIOB_summary">在手表的表盘上分别显示大剂量IOB和基础IOB</string>
     <string name="nosuccess">未成功-请检查手机</string>
-    <string name="patientage">病人年龄</string>
     <string name="child">儿童</string>
     <string name="teenage">青少年</string>
     <string name="adult">成人</string>
     <string name="resistantadult">胰岛素抵抗成人</string>
-    <string name="patientage_summary">请选择患者年龄以设置安全限制</string>
     <string name="Glimp">Glimp</string>
     <string name="needwhitelisting">%1$s 需要加入电池优化白名单才能正常运行</string>
     <string name="loopsuspended">闭环暂停了</string>
@@ -569,7 +567,6 @@
     <string name="combo_error_failure_reading_changed_basal_rate">泵上的基础率改变了，但是读取失败</string>
     <string name="combo_activity_checking_for_history_changes">检查历史记录变化</string>
     <string name="combo_error_multiple_boluses_with_identical_timestamp">在同一分钟内使用相同数量的多个大剂量记录被导入的。治疗中只能增加一项记录。请手动检查泵并使用记录标签手动添加一个大剂量记录。确保创建一个和其他大剂量记录时间不重复的大剂量记录.</string>
-    <string name="about_link_urls">\n\nhttp://www.androidaps.org\nhttp://www.androidaps.de (de)\n\nfacebook:\nhttp://facebook.androidaps.org\nhttp://facebook.androidaps.de (de)</string>
     <string name="combo_check_date">最后一次大剂量的输注时间是在24个小时以前或者在未来的时间，请检查泵上的日期设置的的是否正确</string>
     <string name="combo_suspious_bolus_time">输注过的大剂量的时间／日期看着好像错了，活性胰岛素可能不准确。请检查泵的时间／日期</string>
     <string name="profileswitch_ismissing">配置文件切换缺失。请做一次配置文件切换或者在本地配置文件里按“激活配置文件”</string>
